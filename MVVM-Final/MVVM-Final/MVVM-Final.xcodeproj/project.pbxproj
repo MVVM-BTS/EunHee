@@ -66,8 +66,8 @@
 		F67798BB28AF77F100AAD2EF /* MVVM-Final */ = {
 			isa = PBXGroup;
 			children = (
-				F67798BC28AF77F100AAD2EF /* AppDelegate.swift */,
-				F67798BE28AF77F100AAD2EF /* SceneDelegate.swift */,
+				F67798DB28AF8FD500AAD2EF /* Resource */,
+				F67798DA28AF8FC700AAD2EF /* Application */,
 				F67798C028AF77F100AAD2EF /* ViewController.swift */,
 				F67798D828AF827700AAD2EF /* ViewModel.swift */,
 				F67798D028AF80C100AAD2EF /* Entity.swift */,
@@ -75,11 +75,27 @@
 				F67798D228AF80D000AAD2EF /* Repository.swift */,
 				F67798D428AF817700AAD2EF /* Model.swift */,
 				F67798C228AF77F100AAD2EF /* Main.storyboard */,
-				F67798C528AF77F400AAD2EF /* Assets.xcassets */,
-				F67798C728AF77F400AAD2EF /* LaunchScreen.storyboard */,
 				F67798CA28AF77F400AAD2EF /* Info.plist */,
 			);
 			path = "MVVM-Final";
+			sourceTree = "<group>";
+		};
+		F67798DA28AF8FC700AAD2EF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F67798BC28AF77F100AAD2EF /* AppDelegate.swift */,
+				F67798BE28AF77F100AAD2EF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F67798DB28AF8FD500AAD2EF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F67798C528AF77F400AAD2EF /* Assets.xcassets */,
+				F67798C728AF77F400AAD2EF /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
