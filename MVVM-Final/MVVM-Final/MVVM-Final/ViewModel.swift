@@ -7,31 +7,18 @@
 
 import Foundation
 
-
+import RxRelay
 
 class ViewModel {
-    var onUpdate: () -> Void = {}
-    var dateTimeString: String = "Loading..."   // 화면에 보여줄 값 (== View를 위한 Model == ViewModel)
-    {
-        didSet {
-            onUpdate()
-        }
-        
-        // UI Thread를 처리하는 부분은 뷰모델에서 업데이트 해줄 때 해줘야함 ↓
-        // 하지만 뷰모델은 UIKit과 관련없는 부분이므로 VC에서 비동기로 처리해줌
-//        didSet {
-//            DispatchQueue.main.async {
-//                onUpdate()
-//            }
-//        }
-    }
+    let dateTimeString = BehaviorRelay(value: "Loading...") // 변형이 일어나는 부분
+
     let service = Service()
     
     func viewDidLoad() {
         service.fetchNow { [weak self] model in
             guard let self = self else { return }
             let dateString = self.dateToString(date: model.currentDateTime)
-            self.dateTimeString = dateString
+            self.dateTimeString.accept(dateString)  // accpet로 값 넣어줌
         }
     }
     

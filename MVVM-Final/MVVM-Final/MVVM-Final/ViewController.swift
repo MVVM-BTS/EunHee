@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class ViewController: UIViewController {
     @IBOutlet weak var dateTimeLabel: UILabel!
     
@@ -23,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     let viewModel = ViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +36,17 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private func bind() {
-        viewModel.onUpdate = { [weak self] in
-            // call-back 받아 UI를 변경시킴
-            DispatchQueue.main.async {
-                self?.dateTimeLabel.text = self?.viewModel.dateTimeString
-            }
-        }
+        // upDate 되면 처리해주는 부분 (이해 덜 됨)
+        viewModel.dateTimeString    // viewModel의 dateTimeString에 변화가 일어나면
+        /*
+            .observe(on: MainScheduler.instance)    // 메인스케줄러로 바꾼 다음
+            .subscribe(onNext: { str in // onNext 되었을때 str 들어오면
+                self.dateTimeLabel.text = str   // 여기 넣을거임
+            })
+         */
+            .bind(to: dateTimeLabel.rx.text)    // == 42 ~ 45번째 줄
+            .disposed(by: disposeBag)
+
         viewModel.viewDidLoad() // data fetch
     }
 }

@@ -16,6 +16,7 @@ class Service {
     var currentModel = Model(currentDateTime: Date()) // 현재 자신(= Service)이 서비스하고 있는 Model을 알아야 하므로
     
     func fetchNow(onCompleted: @escaping (Model) -> Void) {
+        // Entity -> Model
         repository.fetchNow { entity in
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm'Z'"
