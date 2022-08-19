@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 class ViewModel {
     var onUpdate: () -> Void = {}
     var dateTimeString: String = "Loading..."   // 화면에 보여줄 값 (== View를 위한 Model == ViewModel)
