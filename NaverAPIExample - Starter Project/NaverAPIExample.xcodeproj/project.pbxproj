@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6EAA773291A7DA10081BF5E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAA772291A7DA10081BF5E /* Errors.swift */; };
+		F6EAA776291A7DF80081BF5E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAA775291A7DF80081BF5E /* Logger.swift */; };
+		F6EAA778291A7E130081BF5E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAA777291A7E130081BF5E /* APIConstants.swift */; };
+		F6EAA77A291A7E170081BF5E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAA779291A7E170081BF5E /* APIRequest.swift */; };
+		F6EAA77C291A7E1A0081BF5E /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAA77B291A7E1A0081BF5E /* APIResponse.swift */; };
+		F6EAA77E291A7E200081BF5E /* APIServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAA77D291A7E200081BF5E /* APIServiceManager.swift */; };
 		FC1AC7212076092E0082F677 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC7202076092E0082F677 /* SearchViewController.swift */; };
 		FC1AC7232076095E0082F677 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC7222076095E0082F677 /* MoviesTableViewController.swift */; };
 		FC1AC72820760D9A0082F677 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AC72720760D9A0082F677 /* Model.swift */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6EAA772291A7DA10081BF5E /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		F6EAA775291A7DF80081BF5E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F6EAA777291A7E130081BF5E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		F6EAA779291A7E170081BF5E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		F6EAA77B291A7E1A0081BF5E /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		F6EAA77D291A7E200081BF5E /* APIServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceManager.swift; sourceTree = "<group>"; };
 		FC1AC7202076092E0082F677 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FC1AC7222076095E0082F677 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		FC1AC72720760D9A0082F677 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -61,8 +73,6 @@
 		F6EAA766291A7A7F0081BF5E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F6EAA76A291A7A9F0081BF5E /* Network */,
-				F6EAA767291A7A870081BF5E /* Presentation */,
 				F6EAA764291A7A6A0081BF5E /* Application */,
 			);
 			path = Source;
@@ -96,7 +106,8 @@
 		F6EAA76A291A7A9F0081BF5E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FC1AC72720760D9A0082F677 /* Model.swift */,
+				F6EAA770291A7BC50081BF5E /* API */,
+				F6EAA76D291A7B7E0081BF5E /* Response */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -119,6 +130,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F6EAA76D291A7B7E0081BF5E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AC72720760D9A0082F677 /* Model.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		F6EAA770291A7BC50081BF5E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F6EAA777291A7E130081BF5E /* APIConstants.swift */,
+				F6EAA779291A7E170081BF5E /* APIRequest.swift */,
+				F6EAA77B291A7E1A0081BF5E /* APIResponse.swift */,
+				F6EAA77D291A7E200081BF5E /* APIServiceManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F6EAA771291A7D5C0081BF5E /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				F6EAA775291A7DF80081BF5E /* Logger.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		F6EAA774291A7DDB0081BF5E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F6EAA771291A7D5C0081BF5E /* Debug */,
+				F6EAA772291A7DA10081BF5E /* Errors.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		FCD5396E2073871C0085FE4E = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +185,9 @@
 		FCD539792073871C0085FE4E /* NaverAPIExample */ = {
 			isa = PBXGroup;
 			children = (
+				F6EAA774291A7DDB0081BF5E /* Shared */,
+				F6EAA767291A7A870081BF5E /* Presentation */,
+				F6EAA76A291A7A9F0081BF5E /* Network */,
 				F6EAA766291A7A7F0081BF5E /* Source */,
 				F6EAA765291A7A740081BF5E /* Resource */,
 				FCD539862073871E0085FE4E /* Info.plist */,
@@ -216,10 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6EAA77E291A7E200081BF5E /* APIServiceManager.swift in Sources */,
+				F6EAA773291A7DA10081BF5E /* Errors.swift in Sources */,
 				FC1AC72A2076154C0082F677 /* MoviesTableViewCell.swift in Sources */,
 				FC1AC72820760D9A0082F677 /* Model.swift in Sources */,
+				F6EAA77C291A7E1A0081BF5E /* APIResponse.swift in Sources */,
 				FC1AC7232076095E0082F677 /* MoviesTableViewController.swift in Sources */,
+				F6EAA778291A7E130081BF5E /* APIConstants.swift in Sources */,
+				F6EAA776291A7DF80081BF5E /* Logger.swift in Sources */,
 				FC1AC7212076092E0082F677 /* SearchViewController.swift in Sources */,
+				F6EAA77A291A7E170081BF5E /* APIRequest.swift in Sources */,
 				FCD5397B2073871C0085FE4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
