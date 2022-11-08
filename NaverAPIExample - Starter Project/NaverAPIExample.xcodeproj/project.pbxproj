@@ -41,6 +41,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6EAA764291A7A6A0081BF5E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FCD5397A2073871C0085FE4E /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F6EAA765291A7A740081BF5E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FCD539812073871E0085FE4E /* Assets.xcassets */,
+				FCD539832073871E0085FE4E /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F6EAA766291A7A7F0081BF5E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F6EAA76A291A7A9F0081BF5E /* Network */,
+				F6EAA767291A7A870081BF5E /* Presentation */,
+				F6EAA764291A7A6A0081BF5E /* Application */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F6EAA767291A7A870081BF5E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F6EAA768291A7A8B0081BF5E /* SearchScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F6EAA768291A7A8B0081BF5E /* SearchScene */ = {
+			isa = PBXGroup;
+			children = (
+				F6EAA76C291A7ABA0081BF5E /* ViewModel */,
+				F6EAA76B291A7AB00081BF5E /* View */,
+			);
+			path = SearchScene;
+			sourceTree = "<group>";
+		};
+		F6EAA769291A7A950081BF5E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AC7292076154C0082F677 /* MoviesTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F6EAA76A291A7A9F0081BF5E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AC72720760D9A0082F677 /* Model.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6EAA76B291A7AB00081BF5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCD5397E2073871C0085FE4E /* Main.storyboard */,
+				FC1AC7202076092E0082F677 /* SearchViewController.swift */,
+				FC1AC7222076095E0082F677 /* MoviesTableViewController.swift */,
+				F6EAA769291A7A950081BF5E /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6EAA76C291A7ABA0081BF5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FCD5396E2073871C0085FE4E = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +138,9 @@
 		FCD539792073871C0085FE4E /* NaverAPIExample */ = {
 			isa = PBXGroup;
 			children = (
-				FCD5397A2073871C0085FE4E /* AppDelegate.swift */,
-				FCD5397E2073871C0085FE4E /* Main.storyboard */,
-				FCD539812073871E0085FE4E /* Assets.xcassets */,
-				FCD539832073871E0085FE4E /* LaunchScreen.storyboard */,
+				F6EAA766291A7A7F0081BF5E /* Source */,
+				F6EAA765291A7A740081BF5E /* Resource */,
 				FCD539862073871E0085FE4E /* Info.plist */,
-				FC1AC7202076092E0082F677 /* SearchViewController.swift */,
-				FC1AC7222076095E0082F677 /* MoviesTableViewController.swift */,
-				FC1AC72720760D9A0082F677 /* Model.swift */,
-				FC1AC7292076154C0082F677 /* MoviesTableViewCell.swift */,
 			);
 			path = NaverAPIExample;
 			sourceTree = "<group>";
