@@ -76,14 +76,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		F6EAA766291A7A7F0081BF5E /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				F6EAA764291A7A6A0081BF5E /* Application */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 		F6EAA767291A7A870081BF5E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,10 +202,10 @@
 		FCD539792073871C0085FE4E /* NaverAPIExample */ = {
 			isa = PBXGroup;
 			children = (
+				F6EAA764291A7A6A0081BF5E /* Application */,
 				F6EAA774291A7DDB0081BF5E /* Shared */,
 				F6EAA767291A7A870081BF5E /* Presentation */,
 				F6EAA76A291A7A9F0081BF5E /* Network */,
-				F6EAA766291A7A7F0081BF5E /* Source */,
 				F6EAA765291A7A740081BF5E /* Resource */,
 				FCD539862073871E0085FE4E /* Info.plist */,
 			);
